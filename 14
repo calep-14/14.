@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monserrat, ¿serás mi San Valentín?</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #ff9a9e, #fad0c4);
+      text-align: center;
+      padding: 50px;
+      color: #fff;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+    button {
+      font-size: 1.5rem;
+      padding: 10px 20px;
+      margin: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    #yes {
+      background-color: #28a745;
+      color: rojo;
+    }
+    #no {
+      background-color: #dc3545;
+      color: rojo;
+    }
+  </style>
+</head>
+<body>
+  <h1>Monserrat, ¿quieres ser mi San Valentín?</h1>
+  <div>
+    <button id="yes" onclick="yesClicked()">¡Sí!</button>
+    <button id="no" onclick="noClicked()">No</button>
+  </div>
+
+  <script>
+    const noButton = document.getElementById('no');
+    const yesButton = document.getElementById('yes');
+
+    function noClicked() {
+      noButton.style.transform = 'scale(0.8)';
+      yesButton.style.transform = 'scale(1.2)';
+    }
+
+    function yesClicked() {
+      document.body.innerHTML = `
+        <h1>¡Sabía que dirías que sí! ❤️</h1>
+        <p>Feliz San Valentín, Monserrat. Te amo mucho.</p>
+      `;
+    }
+  </script>
+</body>
+</html>
